@@ -47,8 +47,8 @@ Use the copy function below to do the following:
 // take 1 parameter - you can call it anything but its holding the palce for thte array you will pass in as your argument.
 function copy(newList){
   // take a spread of the parameter
-  const copy1 = [...originalFlavors];
-  return copy1;
+  const array = [...originalFlavors];
+  return array;
 }      
 
 console.log('task 1', copy())
@@ -134,11 +134,14 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 // 2 parameters (array, number) holding a place for an index.  
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, number){
+  for(let i = 0; i < array.length; i++){
+    array.indexOf(number);
+    return array[number];
+  }
   //return array[0]
 }
-
+console.log('task 5', getFlavorByIndex(originalFlavors, 2))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -155,16 +158,19 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 // 2 parameters array and string we want to remove
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, string){
+  for (let i = 0; i < array.length; i++){
+    if(array[i].includes(string)){
+      array.splice(i,1);
+    }
   //loop through the array and check every index for the exact match of the string, if it exists then remove it using splice()
-
   // .splice(start, how many items to delete);
-
+  }
+  return array;
   //outside of looop, return the array;
 }
 
-
+console.log('task 6', removeFlavorByName(originalFlavors, "Rocky Road"))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
