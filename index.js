@@ -45,11 +45,13 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 // take 1 parameter - you can call it anything but its holding the palce for thte array you will pass in as your argument.
-function copy(/*your code here*/){
+function copy(newList){
   // take a spread of the parameter
-  /*your code here*/
-}    
+  const copy1 = [...originalFlavors];
+  return copy1;
+}      
 
+console.log('task 1', copy())
 
 
 
@@ -65,10 +67,17 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 // taking 1 parameter - its holding the place for an array
-function is31Flavors(/*your code here*/){
- /*your code here*/
- // conditional inside of here - if its true return true, else return false ** it should be exactly 31 items insdie array
+function is31Flavors(array){
+if (array = 31) {
+  return true;
+} else {
+  return false;
 }
+}
+ // conditional inside of here - if its true return true, else return false ** it should be exactly 31 items insdie array
+
+
+console.log('task 2', is31Flavors(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -83,11 +92,14 @@ Use the addFlavor function below to do the following:
 */
 
 // 2 paramters (array, string) which is holding the place for new flavour
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){ 
+  for (let i = 0; i < array.length; i++){
+  array.unshift(string);
+  return array;
  //use unshift to add the new flavour to the beginning of therecieved array
  // return the array
-}
+}}
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -102,12 +114,13 @@ Use the removeLastFlavor function below to do the following:
 */
 
 // 1 parameter which will be a place holder for the array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+  array.pop();
+  return array;
  // use pop to remove the last item
  //return the array
 }
-
+console.log('task 4', removeLastFlavor(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -187,7 +200,7 @@ function filterByWord(array, string){
 }
 return filtered;
 }
- console.log('task 7', filteredByWord(originalFlavors, 'Chocolate'))
+ console.log('task 7', filterByWord(originalFlavors, 'Chocolate'))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
